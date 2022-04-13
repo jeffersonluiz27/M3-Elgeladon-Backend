@@ -31,8 +31,8 @@ const paletas = [
   },
 ];
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.get('/', async (req, res) => {
+  res.send('API Online');
 });
 
 app.get('/paletas/find-paletas', (req, res) => {
