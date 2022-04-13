@@ -1,0 +1,19 @@
+{
+  "name": "m3-proj1-elgeladon-backend",
+  "version": "1.0.0",
+  "description": "Projeto Backend do site elgeladon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffersonluiz27/M3-Proj1-Elgeladon-Backend.git"
+  },
+  "author": "Jefferson Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffersonluiz27/M3-Proj1-Elgeladon-Backend/issues"
+  },
+  "homepage": "https://github.com/jeffersonluiz27/M3-Proj1-Elgeladon-Backend#readme"
+}
