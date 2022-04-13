@@ -39,6 +39,12 @@ app.get('/paletas/find-paletas', (req, res) => {
   res.send(paletas);
 });
 
+app.get('/paletas/find-paleta/:id', (req, res) => {
+  const idPaleta = req.params.id;
+  const chosenPaleta = paletas.find((paleta) => paleta.id == idPaleta);
+  res.send(chosenPaleta);
+});
+
 app.listen(port, () => {
   console.log(`A magica acontece em http://localhost:${port}`);
 });
