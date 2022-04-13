@@ -35,6 +35,10 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
+app.get('/paletas/find-paletas', (req, res) => {
+  res.send(paletas);
+});
+
 app.listen(port, () => {
   console.log(`A magica acontece em http://localhost:${port}`);
 });
