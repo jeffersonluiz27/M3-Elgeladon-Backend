@@ -23,6 +23,14 @@ const paletas = [
     foto: 'assets/images/chocolate-belga.png',
     preco: 7.0,
   },
+  {
+    id: 4,
+    sabor: 'Limao',
+    descricao:
+      'Quam vulputate dignissim suspendisse in est ante in nibh mauris.',
+    foto: 'assets/images/limao.png',
+    preco: 7.0,
+  },
 ];
 
 const findPaletasService = () => {
