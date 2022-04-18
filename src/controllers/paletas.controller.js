@@ -65,7 +65,9 @@ const updatePaletaController = (req, res) => {
 };
 
 const deletePaletaController = (req, res) => {
-  const idParam = +req.params.id;
+  const idParam = Number(req.params.id);
+
+  console.log(idParam);
 
   if (!idParam) {
     return res.status(400).send({ message: 'Id invalido!' });
