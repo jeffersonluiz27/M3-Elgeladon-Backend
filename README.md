@@ -1,4 +1,3 @@
-# M3-Proj1-Elgeladon-Backend
 ## Projeto catalogo de paletas
 - Utiliza estrutura MVC
 - Configurado arquivo para rotas
