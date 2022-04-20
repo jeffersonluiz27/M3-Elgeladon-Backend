@@ -38,7 +38,7 @@ const createPaletaController = (req, res) => {
     return res.status(400).send({ message: 'Preenha todos os Campos' });
   }
   const newPaleta = paletasService.createPaletaService(paleta);
-  res.status(201).send(newPaleta);
+  res.status(201).send({ newPaleta, message: 'Cadastrado com sucesso!' });
 };
 
 const updatePaletaController = (req, res) => {
@@ -61,7 +61,7 @@ const updatePaletaController = (req, res) => {
   }
 
   const updatedPaleta = paletasService.updatePaletaService(idParam, paletaEdit);
-  res.send(updatedPaleta);
+  res.send({ updatedPaleta, message: 'Editado com sucesso!' });
 };
 
 const deletePaletaController = (req, res) => {
