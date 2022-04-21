@@ -11,22 +11,17 @@ const findPaletaByIdService = async (id) => {
 };
 
 const createPaletaService = async (newPaleta) => {
-  const newId = paletas.length + 1;
-  newPaleta.id = newId;
-  paletas.push(newPaleta);
-  return newPaleta;
+  const paletaCriada = await Paleta.create(newPaleta);
+  return paletaCriada;
 };
 
 const updatePaletaService = async (id, paletaEdited) => {
-  paletaEdited['id'] = id;
-  const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
-  paletas[paletaIndex] = paletaEdited;
-  return paletaEdited;
+  paletaAtualizada = await Paleta.findByIdAndUpdate(id, paletaEdited);
+  return paletaAtualizada;
 };
 
 const deletePaletaService = async (id) => {
-  const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
-  return paletas.splice(paletaIndex, 1);
+  return await Paleta.findByIdAndDelete(id);
 };
 
 module.exports = {
