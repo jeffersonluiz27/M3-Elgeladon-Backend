@@ -1,7 +1,7 @@
 const paletasService = require('../services/paletas.service');
 
-const findPaletasController = (req, res) => {
-  const allPaletas = paletasService.findPaletasService();
+const findPaletasController = async (req, res) => {
+  const allPaletas = await paletasService.findPaletasService();
 
   if (allPaletas.length == 0) {
     return res.status(404).send({ message: 'Não exitem paletas!' });

@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const route = require('./src/routes/paletas.route');
-const { connect } = require('./src/routes/paletas.route');
 const connectToDatabase = require('./src/database/database');
 
 const port = 3000;
