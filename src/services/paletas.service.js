@@ -5,25 +5,26 @@ const findPaletasService = async () => {
   return paletas;
 };
 
-const findPaletaByIdService = (id) => {
-  return paletas.find((paleta) => paleta.id == id);
+const findPaletaByIdService = async (id) => {
+  const paleta = await Paleta.findById(id);
+  return paleta;
 };
 
-const createPaletaService = (newPaleta) => {
+const createPaletaService = async (newPaleta) => {
   const newId = paletas.length + 1;
   newPaleta.id = newId;
   paletas.push(newPaleta);
   return newPaleta;
 };
 
-const updatePaletaService = (id, paletaEdited) => {
+const updatePaletaService = async (id, paletaEdited) => {
   paletaEdited['id'] = id;
   const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
   paletas[paletaIndex] = paletaEdited;
   return paletaEdited;
 };
 
-const deletePaletaService = (id) => {
+const deletePaletaService = async (id) => {
   const paletaIndex = paletas.findIndex((paleta) => paleta.id == id);
   return paletas.splice(paletaIndex, 1);
 };
