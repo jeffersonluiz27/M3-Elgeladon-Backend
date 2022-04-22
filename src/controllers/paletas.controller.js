@@ -47,13 +47,12 @@ const createPaletaController = async (req, res) => {
 
 const updatePaletaController = async (req, res) => {
   const idParam = req.params.id;
+  const paletaEdit = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(idParam)) {
     res.status(400).send({ message: 'Id invalido!' });
     return;
   }
-
-  const paletaEdit = req.body;
 
   const chosenPaleta = await paletasService.findPaletaByIdService(idParam);
 
