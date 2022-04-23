@@ -38,7 +38,7 @@ const updatePaletaController = async (req, res) => {
     idParam,
     paletaEdit,
   );
-  res.send(updatedPaleta);
+  res.send({ updatedPaleta, message: '' });
 };
 
 const deletePaletaController = async (req, res) => {
