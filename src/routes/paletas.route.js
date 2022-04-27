@@ -1,9 +1,14 @@
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('../../swagger.json');
 const route = require('express').Router();
 const controllerPaletas = require('../controllers/paletas.controller');
 const {
   validId,
   validObjectBody,
 } = require('../middlewares/paleta.middleware');
+
+route.use('/api-docs', swaggerUi.serve);
+route.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 route.get('/all-paletas', controllerPaletas.findPaletasController);
 route.get(
