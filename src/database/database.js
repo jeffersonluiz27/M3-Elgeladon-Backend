@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 
+const dblocal = 'mongodb://localhost:27017/paletas-db';
+const dbatlas = '';
+
 async function connectToDatabase() {
   await mongoose
-    .connect('mongodb://localhost:27017/paletas-db', {
+    .connect(dblocal, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
