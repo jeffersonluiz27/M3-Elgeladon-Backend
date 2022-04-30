@@ -5,6 +5,7 @@ const PaletaSchema = new mongooose.Schema({
   descricao: { type: String, required: true },
   foto: { type: String, required: true },
   preco: { type: Number, required: true },
+  recheio: { type: String, required: false },
 });
 
 const Paleta = mongooose.model('paletas', PaletaSchema);
