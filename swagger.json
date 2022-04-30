@@ -11,12 +11,16 @@
   },
   "servers": [
     {
+      "url": "https://api-el-geladon-m3.onrender.com/paletas",
+      "description": "API de produção"
+    },
+    {
       "url": "http://localhost:3000/paletas",
       "description": "API de homologação"
     },
     {
       "url": "https://api-elgeladon.herokuapp.com/paletas",
-      "description": "API de produção"
+      "description": "API Exemplo Base"
     }
   ],
   "paths": {
