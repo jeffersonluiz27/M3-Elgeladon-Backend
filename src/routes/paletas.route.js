@@ -2,6 +2,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../../swagger.json');
 const route = require('express').Router();
 const controllerPaletas = require('../controllers/paletas.controller');
+const controllerCarinho = require('../controllers/carrinho.controller');
 const {
   validId,
   validObjectBody,
@@ -31,6 +32,16 @@ route.delete(
   '/delete-paleta/:id',
   validId,
   controllerPaletas.deletePaletaController,
+);
+
+route.get('/all-carrinho', controllerCarinho.findAllCarrinhoController);
+route.post(
+  '/create-carrinho',
+  controllerCarinho.createManyItemsCarrinhoController,
+);
+route.delete(
+  '/finish-carrinho',
+  controllerCarinho.deleteAllItemsCarrinhoController,
 );
 
 module.exports = route;
