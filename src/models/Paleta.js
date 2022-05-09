@@ -1,7 +1,7 @@
 const mongooose = require('mongoose');
 
 const PaletaSchema = new mongooose.Schema({
-  titulo: { type: String, required: true },
+  titulo: { type: String, required: false },
   sabor: { type: String, required: true },
   descricao: { type: String, required: true },
   foto: { type: String, required: true },
